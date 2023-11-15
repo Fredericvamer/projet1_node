@@ -1,0 +1,19 @@
+// ./templates/index.pug
+doctype html
+html(lang="fr")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Premier test en PUG
+        link(rel="stylesheet", href="/css/main.css")
+    body 
+        nav 
+            ul 
+                li 
+                    a(href="/search") Chercher
+        h1 Template PUG 
+        p Voici mon premier test avec PUG
+        p Tu t'appelles #{nom} #{prenom}
+
+        script(src=process.env.BROWSER_REFRESH_URL)
+ 

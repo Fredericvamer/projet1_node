@@ -1,0 +1,17 @@
+// ./templates/search.pug
+doctype html
+html(lang="fr")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Premier test en PUG
+        link(rel="stylesheet", href="/css/main.css")
+    body 
+        h1 Moteur de recherche
+        if q
+            p Votre recherhe <strong>#{q}</strong> n'a donnée aucun résultat
+        form(action="/search" method="post")
+            input(type="search", name="q" value=q)
+            button(type="submit") Rechercher
+
+        script(src=process.env.BROWSER_REFRESH_URL)
